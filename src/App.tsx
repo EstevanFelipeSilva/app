@@ -6,6 +6,7 @@ import { Category } from './Types/Category';
 import { Item } from './Data/Item';
 import { Categories } from './Data/Categories';
 import { getCurrentMonth, filterListByMonth } from './Helpers/dateFilter';
+import { TableArea } from './Components/TableArea';
 
 
 
@@ -35,6 +36,8 @@ function App() {
         {/* Área de Inserção */}
 
         {/* Tabela de Itens */}
+
+        <TableArea list={filteredList}/>
 
       </C.Body>
 
