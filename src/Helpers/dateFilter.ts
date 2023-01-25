@@ -21,3 +21,17 @@ export const filterListByMonth = (list: Itens[], date: string): Itens[] => {
 
     return newList;
 }
+
+// FUNÇÃO PARA FORMARTAR A DATA...
+export const formatDate = (date: Date): string => {
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDate();
+
+    return `${addZeroToDate(day)}/${addZeroToDate(month)}/${year}`;
+}
+
+// ADICIONANDO ZERO NA DATA...
+function addZeroToDate(n: number): string {
+    return n < 10 ? `0${n}` : `${n};`;
+}
